@@ -27,5 +27,10 @@
   "breath_config": {
     "numBreathsEachTime": 15,
     "P0_status": "individual"  // Options: "individual" or "shared"
-  }
+  },
+  "result_directory":"results",
+  "patients": "3:7",
+  "plots":["scatter", "bland-altman", "box"],
+  "consolidate_plots": "True",
+  "title": "Basic Test"
 }
