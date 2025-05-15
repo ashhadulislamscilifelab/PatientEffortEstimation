@@ -106,7 +106,7 @@ Example below
   },
   "result_directory":"results",
   "patients": "3:7",
-  "plots":["scatter", "bland-altman", "box"],
+  "plots":["scatter", "bland-altman", "line"],
   "consolidate_plots": "True", // False
   "title": "Basic Test"
 }
@@ -146,10 +146,13 @@ You will notice two config variables plots and consolidate_plots
 plots is a list containing the plots that should be prepared for all patients and support levels
 - "scatter" - scatter plot of Ppat against Pes for each patient and support level
 - "bland-altman" - Bland altman plot comparing Ppat and Pes
-- "box" - box plots for 'E', 'R', 'NME', 'Compliance' and 'mean_P0'/'P0'
+- "line" - line plots for 'E', 'R', 'NME', 'Compliance' and 'mean_P0'/'P0'
 These plots will be stored in the same directory where the csv files will be created as seen above
 
 The boolean consolidate_plots asks whether user wants to store plots that will consolidate for all patients
 These plots will be stored in 
-results/\<title\>_\<timestamp\>/\<P0_status\>/\<equations_to_run\>/consolidated_plots/ and 
+results/\<title\>_\<timestamp\>/\<P0_status\>/\<equations_to_run\>/consolidated_plots/ 
+
+	and 
+
 results/\<title\>_\<timestamp\>/\<P0_status\>/consolidated_plots/
