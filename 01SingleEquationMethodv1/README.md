@@ -153,6 +153,7 @@ The boolean consolidate_plots asks whether user wants to store plots that will c
 These plots will be stored in 
 results/\<title\>_\<timestamp\>/\<P0_status\>/\<equations_to_run\>/consolidated_plots/ 
 
-	and 
+
+and 
 
 results/\<title\>_\<timestamp\>/\<P0_status\>/consolidated_plots/
