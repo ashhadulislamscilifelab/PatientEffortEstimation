@@ -126,6 +126,7 @@ For example, if result_directory is 'results', equations_to_run contains ["flow"
 Timestamp is useful to denote the experiment date. The location can be generalized as follows
 
 - results/\<title\>_\<timestamp\>/\<P0_status\>/\<equation_to_run\>/pat\<patient_number\>/
+
 They will be csv files containing columns as follows:
 - breath_start
 - breath_end
