@@ -15,6 +15,18 @@ Columns of interest are
 - Pes
 - phase
 
+Note that the naming convention of the files are a braeking point.
+We expect the files to be named as follows
+- meas_pat1_cfg1_idx1.csv
+- meas_pat1_cfg1_idx2.csv
+- meas_pat1_cfg1_idx3.csv
+...
+- meas_pat26_cfg1_idx1.csv
+- meas_pat26_cfg1_idx2.csv
+- meas_pat26_cfg1_idx3.csv
+
+We assume "cfg1" to be fixed and idx to range from 1 to 3. While reading the files, we shall check if the file exists and skip otherwise.
+
 ## Equations
 
 The equations being fitted are
@@ -62,7 +74,8 @@ All these choices should be made in the local config.json file.
 Example below
 ```json
 {
-  "equations_to_run": ["flow", "press", "vol"],
+  "files_directory": "../data/study1v1",
+  "equation_to_run": "flow", // "press", "vol"
 
   "limits": {
     "E": {
@@ -94,7 +107,7 @@ Example below
   "result_directory":"results",
   "patients": "3:7",
   "plots":["scatter", "bland-altman", "box"],
-  "consolidate_plots": "True",
+  "consolidate_plots": "True", // False
   "title": "Basic Test"
 }
 ```
@@ -137,4 +150,5 @@ These plots will be stored in the same directory where the csv files will be cre
 
 The boolean consolidate_plots asks whether user wants to store plots that will consolidate for all patients
 These plots will be stored in 
-results/\<title\>_\<timestamp\>/\<P0_status\>/\<equations_to_run\>/consolidated_plots/
+results/\<title\>_\<timestamp\>/\<P0_status\>/\<equations_to_run\>/consolidated_plots/ and 
+results/\<title\>_\<timestamp\>/\<P0_status\>/consolidated_plots/

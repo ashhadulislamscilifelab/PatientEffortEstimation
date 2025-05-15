@@ -1,21 +1,22 @@
 {
-  "equations_to_run": ["flow", "press", "vol"],
+  "files_directory": "../data/study1v1",
+  "equation_to_run": "flow",
 
   "limits": {
     "E": {
-      "min": 0.033,
+      "min": 0.01,
       "start": 0.1,
-      "max": 0.2
+      "max": 0.10
     },
     "R": {
-      "min": 0.0001,
+      "min": 0.01,
       "start": 5.0,
       "max": 100.0
     },
     "NME": {
-      "min": 0.0,
+      "min": 0.01,
       "start": 2.0,
-      "max": 5.0
+      "max": 10.0
     },
     "P0": {
       "min": -10.0,
@@ -26,11 +27,11 @@
 
   "breath_config": {
     "numBreathsEachTime": 15,
-    "P0_status": "individual"  // Options: "individual" or "shared"
+    "P0_status": "shared" 
   },
   "result_directory":"results",
-  "patients": "3:7",
-  "plots":["scatter", "bland-altman", "box"],
+  "patients": "9:13",
+  "plots":["scatter", "bland-altman", "line"],
   "consolidate_plots": "True",
   "title": "Basic Test"
 }
